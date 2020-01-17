@@ -18,12 +18,14 @@ class Hello extends Component{
 
 class Text extends Component{
   render(){
-    const seboolean = this.props.boolean ? "Daniel" : "Cornelio"
+    const seboolean = this.props.isActived ? "on" : "off"
+    const mappedNumber = this.props.arrayOfNumbers.map(n => n * 2)
     return(
       <>
       <p>{this.props.text}</p>
       <p>{this.props.number}</p>
       <p>{seboolean}</p>
+      <p>{mappedNumber.join(', ')}</p>
       </>
     )
   }
@@ -40,9 +42,10 @@ class App extends Component{
             title="Hola por props"
           />
           <Text
+            arrayOfNumbers={[2,3,10]}
             text="Desde componente texto"
             number = {9}
-            boolean = {true}
+            isActived = {true}
           />
           </header>
       </div>
