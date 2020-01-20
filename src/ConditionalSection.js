@@ -24,13 +24,13 @@ function useConditionalRendering(mostrarA){
 class ConditionalSection extends Component {
     constructor(){
         super()
-        this.state = {mostrarA:false}
+        this.state = {mostrarA:true}
     }
     render() { 
         return (  
             <div>
                 <h4>Conditional Section</h4>
-                {useConditionalRendering(this.state.mostrarA)}
+                {this.state.mostrarA ? <ComponenteA/> : <ComponenteB/>}
             </div>
         );
     }
