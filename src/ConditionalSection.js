@@ -1,36 +1,34 @@
 import React, { Component } from 'react';
 
-class ComponenteA extends Component {
+class LoginButton extends Component {
     render() { 
         return (  
-            <p>Componente A</p>
+            <button>Iniciar Sesion</button>
         );
     }
 }
  
-class ComponenteB extends Component {
+class LogoutButton extends Component {
     render() { 
         return (  
-            <p>Componente B</p>
+            <div>
+                <p>Bienvenido, usuario</p>
+                <button>Cerrar sesion</button>
+            </div>
         );
     }
-}
-function useConditionalRendering(mostrarA){
-    if(mostrarA){
-        return <ComponenteA/>
-    }return <ComponenteB/>
 }
 
 class ConditionalSection extends Component {
     constructor(){
         super()
-        this.state = {mostrarA:true}
+        this.state = {isUserLogged:false}
     }
     render() { 
         return (  
             <div>
                 <h4>Conditional Section</h4>
-                {this.state.mostrarA ? <ComponenteA/> : <ComponenteB/>}
+                {this.state.isUserLogged ? <LoginButton/> : <LogoutButton/>}
             </div>
         );
     }

@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import './App.css';
 // import Props from './Props'
 // import States from './States'
-import ConditionalSection from './ConditionalSection'
-
+// import ConditionalSection from './ConditionalSection'
+import Listas from './Listas'
 
 class App extends Component{
   render(){
@@ -11,7 +11,8 @@ class App extends Component{
       <div className="App">
         {/* <Props/> */}
         {/* <States/> */}
-        <ConditionalSection/>
+        {/* <ConditionalSection/> */}
+        <Listas/>
       </div>
         
     );
