@@ -22,10 +22,11 @@ class Text extends Component{
     const mappedNumber = this.props.arrayOfNumbers.map(n => n * 2)
     return(
       <>
-      <p>{this.props.text}</p>
-      <p>{this.props.number}</p>
-      <p>{seboolean}</p>
-      <p>{mappedNumber.join(', ')}</p>
+        <p>{this.props.text}</p>
+        <p>{this.props.number}</p>
+        <p>{seboolean}</p>
+        <p>{mappedNumber.join(', ')}</p>
+        <p>{this.props.objectWithInfo.key}</p>
       </>
     )
   }
@@ -37,12 +38,13 @@ class App extends Component{
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Curso de React js</h1>
+          <h1>React js</h1>
           <Hello
             title="Hola por props"
           />
           <Text
             arrayOfNumbers={[2,3,10]}
+            objectWithInfo={{key:"first value", key2:"second value"}}
             text="Desde componente texto"
             number = {9}
             isActived = {true}
