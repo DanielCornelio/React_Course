@@ -11,22 +11,34 @@ import './App.css';
 class Hello extends Component{
   render(){
     return(
-      <h2>{this.props.title}</h2>
+      <h2>{this.props.title2}</h2>
     )
   }
 }
+    Hello.defaultProps ={
+      title2:"esto es un texto por defecto"
+    }
 
 class Text extends Component{
   render(){
-    const seboolean = this.props.isActived ? "on" : "off"
-    const mappedNumber = this.props.arrayOfNumbers.map(n => n * 2)
+    const {
+      isActived, 
+      arrayOfNumbers, 
+      multiply,
+      objectWithInfo,
+      
+    } =  this.props
+  
+    const seboolean = isActived ? "on" : "off"
+    const mappedNumber = arrayOfNumbers.map(multiply)
     return(
       <>
+        {this.props.title}
         <p>{this.props.text}</p>
         <p>{this.props.number}</p>
         <p>{seboolean}</p>
         <p>{mappedNumber.join(', ')}</p>
-        <p>{this.props.objectWithInfo.key}</p>
+        <p>{objectWithInfo.key}</p>
       </>
     )
   }
@@ -40,14 +52,16 @@ class App extends Component{
           <img src={logo} className="App-logo" alt="logo" />
           <h1>React js</h1>
           <Hello
-            title="Hola por props"
+            
           />
           <Text
             arrayOfNumbers={[2,3,10]}
             objectWithInfo={{key:"first value", key2:"second value"}}
             text="Desde componente texto"
             number = {9}
+            multiply={number => number *2}
             isActived = {true}
+            title={<h1>esto es un titulo</h1>}
           />
           </header>
       </div>
