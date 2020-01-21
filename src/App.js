@@ -3,7 +3,8 @@ import './App.css';
 // import Props from './Props'
 // import States from './States'
 // import ConditionalSection from './ConditionalSection'
-import Listas from './Listas'
+// import Listas from './Listas'
+import Objetos from './Objetos'
 
 class App extends Component{
   render(){
@@ -12,8 +13,9 @@ class App extends Component{
         {/* <Props/> */}
         {/* <States/> */}
         {/* <ConditionalSection/> */}
-        <Listas/>
-      </div>
+        {/* <Listas/> */}
+        <Objetos/>
+      </div> 
         
     );
   }
