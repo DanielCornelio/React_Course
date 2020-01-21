@@ -6,7 +6,7 @@ class UserItem extends Component{
     render(){
         const { user } = this.props
         return(
-            <li >
+            <li style={li}>
                 <p><strong>Nombre:</strong> {user.first_name} {user.last_name}</p>
                 <p><strong>Sexo:</strong> {user.gender === "Male" ? "masculino" : "Femenino"}</p>
                 <p><strong>Email:</strong> {user.email }</p>
@@ -15,6 +15,7 @@ class UserItem extends Component{
             </li>
         )
     }
+    
 }
 
 class Objetos extends Component {
@@ -36,7 +37,7 @@ class Objetos extends Component {
                         })
                     }
                 </ul>
-                <ul>
+                <ul style={ul}>
                     {
                         usuarios.map(user =>{
                             return <UserItem key={user.id} user={user}/>
@@ -47,5 +48,14 @@ class Objetos extends Component {
         );
     }
 }
- 
+        const ul={
+            display:"flex",
+            flexWrap:"wrap",
+            padding: 10,
+        }
+        const li ={
+            padding:10,
+            width:"20%"
+        }
+
 export default Objetos;
