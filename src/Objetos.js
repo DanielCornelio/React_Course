@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import cars from './data/cars.json'
 import usuarios from './data/usuarios.json'
+
+class UserItem extends Component{
+    render(){
+        const { user } = this.props
+        return(
+            <li >
+                <p><strong>Nombre:</strong> {user.first_name} {user.last_name}</p>
+                <p><strong>Sexo:</strong> {user.gender === "Male" ? "masculino" : "Femenino"}</p>
+                <p><strong>Email:</strong> {user.email }</p>
+                <p><strong>Ip Address</strong> {user.ip_address}</p>
+                
+            </li>
+        )
+    }
+}
+
 class Objetos extends Component {
     state = {  }
     render() { 
@@ -14,6 +30,7 @@ class Objetos extends Component {
                                 <li key={car.id}>
                                     <p><strong>Nombre: </strong>{car.name}</p>
                                     <p><strong>Marca: </strong>{car.company}</p>
+                                    
                                 </li>
                             )
                         })
@@ -22,13 +39,7 @@ class Objetos extends Component {
                 <ul>
                     {
                         usuarios.map(user =>{
-                            return(
-                                <li key={user.id}>
-                                    <p><strong>Nombre:</strong> {user.first_name} {user.last_name}</p>
-                                    <p><strong>Email:</strong> {user.email}</p>
-                                    <p><strong>Ip Address</strong> {user.ip_address}</p>
-                                </li>
-                            )
+                            return <UserItem key={user.id} user={user}/>
                         })
                     }
                 </ul>
