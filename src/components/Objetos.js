@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import cars from './data/cars.json'
-import usuarios from './data/usuarios.json'
+import cars from '../data/cars.json'
+import usuarios from '../data/usuarios.json'
 
 class UserItem extends Component{
     render(){
@@ -51,11 +51,14 @@ class Objetos extends Component {
         const ul={
             display:"flex",
             flexWrap:"wrap",
-            padding: 10,
+            listStyle:"none"
+            
         }
         const li ={
             padding:10,
-            width:"20%"
+            width:"20%",
+            border:"1px solid",
+            
         }
 
 export default Objetos;
