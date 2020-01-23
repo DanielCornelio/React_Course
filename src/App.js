@@ -7,7 +7,8 @@ import './App.css';
 // import Objetos from './components/Objetos'
 // import Onclick from './components/OnClick'
 // import EventosSinteticos from './components/EventosSinteticos'
-import EventosSoportados from './components/EventosSoportados'
+// import EventosSoportados from './components/EventosSoportados'
+import Formularios from '../components/Formularios'
 
 class App extends Component{
   render(){
@@ -20,7 +21,8 @@ class App extends Component{
         {/* <Objetos/> */}
         {/* <Onclick/> */}
         {/* <EventosSinteticos/> */}
-        <EventosSoportados/>
+        {/* <EventosSoportados/> */}
+        <Formularios/>
       </div> 
         
     );
