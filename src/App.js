@@ -12,7 +12,8 @@ import './App.css';
 // import EventoOnSubmit from './components/EventoOnSubmit'
 // import ComponentesControlados from './components/ComponentesControlados'
 // import PropChildren from './components/PropChildren';
-import ChildrenLayout from './components/ChildrenLayout'
+// import ChildrenLayout from './components/ChildrenLayout'
+import PropTypes from './components/PropTypes'
 class App extends Component{
   render(){
     return (
@@ -29,7 +30,8 @@ class App extends Component{
         {/* <EventoOnSubmit/> */}
         {/* <ComponentesControlados/> */}
         {/* <PropChildren/> */}
-        <ChildrenLayout/>
+        {/* <ChildrenLayout/> */}
+        <PropTypes/>
       </div> 
         
     );

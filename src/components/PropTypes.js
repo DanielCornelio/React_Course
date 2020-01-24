@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types'
 class Box extends Component{
     render(){
         return (
@@ -11,12 +11,15 @@ class Box extends Component{
 }
 
 class Article extends Component{
+    static propTypes = {
+        author: PropTypes.string
+    }
     render(){
         const{title, author, date, children} = this.props 
         return(
             <section>
                 <h2>{title}</h2>
-               <p><em>Escrito por {author}</em></p>
+                {author && <p><em>Escrito por {author}</em></p>}
                 <Box>{date}</Box>
                 <article>
                     {children}
