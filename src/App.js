@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import './App.css';
-import PropChildren from './components/PropChildren';
 // import Props from './components/Props'
 // import States from './components/States'
 // import ConditionalSection from './components/ConditionalSection'
@@ -12,7 +11,8 @@ import PropChildren from './components/PropChildren';
 // import Formularios from './components/Formularios'
 // import EventoOnSubmit from './components/EventoOnSubmit'
 // import ComponentesControlados from './components/ComponentesControlados'
-
+// import PropChildren from './components/PropChildren';
+import ChildrenLayout from './components/ChildrenLayout'
 class App extends Component{
   render(){
     return (
@@ -29,6 +29,7 @@ class App extends Component{
         {/* <EventoOnSubmit/> */}
         {/* <ComponentesControlados/> */}
         {/* <PropChildren/> */}
+        <ChildrenLayout/>
       </div> 
         
     );
