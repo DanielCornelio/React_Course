@@ -8,7 +8,9 @@ import './App.css';
 // import Onclick from './components/OnClick'
 // import EventosSinteticos from './components/EventosSinteticos'
 // import EventosSoportados from './components/EventosSoportados'
-import Formularios from '../components/Formularios'
+// import Formularios from './components/Formularios'
+// import EventoOnSubmit from './components/EventoOnSubmit'
+// import ComponentesControlados from './components/ComponentesControlados'
 
 class App extends Component{
   render(){
@@ -22,7 +24,9 @@ class App extends Component{
         {/* <Onclick/> */}
         {/* <EventosSinteticos/> */}
         {/* <EventosSoportados/> */}
-        <Formularios/>
+        {/* <Formularios/> */}
+        {/* <EventoOnSubmit/> */}
+        {/* <ComponentesControlados/> */}
       </div> 
         
     );

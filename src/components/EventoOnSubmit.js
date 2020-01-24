@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
-class Formularios extends Component {
+class EventoOnSubmit extends Component {
     state = {  }
-    handleClick= (e)=> {
+    handleSubmit= (e)=> {
         e.preventDefault()
         const name = this.inputName.value
         const email = this.inputTwitter.value
         console.log({name,email})
     }
+    handleChange = (e)=>{
+        console.log('handeleChange')
+        console.log(e.target.checked)
+    }
     render() {     
         return (  
             <>
                 <h4>Trabajando con Formularios</h4>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <p>
                         <label htmlFor="name">Nombre: </label>
                         <input
@@ -31,7 +35,13 @@ class Formularios extends Component {
                             ref={inputElement => this.inputTwitter = inputElement}
                         />
                     </p>
-                    <button onClick={this.handleClick}>Enviar</button>
+                    <p>
+                        <label>
+                            <input onChange={this.handleChange} type="checkbox"/>
+                            Accepted terms
+                        </label>
+                    </p>
+                    <button>Enviar</button>
 
                 </form>
             </>
@@ -40,4 +50,4 @@ class Formularios extends Component {
 }
  
 
-export default Formularios;
+export default EventoOnSubmit;
