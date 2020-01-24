@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
+import PropChildren from './components/PropChildren';
 // import Props from './components/Props'
 // import States from './components/States'
 // import ConditionalSection from './components/ConditionalSection'
@@ -27,6 +28,7 @@ class App extends Component{
         {/* <Formularios/> */}
         {/* <EventoOnSubmit/> */}
         {/* <ComponentesControlados/> */}
+        {/* <PropChildren/> */}
       </div> 
         
     );
