@@ -13,7 +13,8 @@ import './App.css';
 // import ComponentesControlados from './components/ComponentesControlados'
 // import PropChildren from './components/PropChildren';
 // import ChildrenLayout from './components/ChildrenLayout'
-import PropTypes from './components/PropTypes'
+// import PropTypes from './components/PropTypes'
+// import Constructor from './components/Constructor'
 class App extends Component{
   render(){
     return (
@@ -31,7 +32,8 @@ class App extends Component{
         {/* <ComponentesControlados/> */}
         {/* <PropChildren/> */}
         {/* <ChildrenLayout/> */}
-        <PropTypes/>
+        {/* <PropTypes/> */}
+        {/* <Constructor/> */}
       </div> 
         
     );
