@@ -5,13 +5,20 @@ class EjemploDeComponentDidMount extends Component {
     console.log('constructor')
     super(props)
     this.state = { scroll: 0 }
+    
   }
 
   componentWillMount () {
     console.log('componentWillMount')
+    
   }
 
-  
+ componentDidMount(){
+     console.log('componentDidMount')
+     document.addEventListener('scroll', ()=>{
+         this.setState({scroll: window.scrollY})
+     })
+ }  
 
   render () {
     console.log('render')
