@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
+import ComponentWillMount from './components/life-cicle/ComponentWillMount';
 // import Props from './components/Props'
 // import States from './components/States'
 // import ConditionalSection from './components/ConditionalSection'
@@ -14,7 +15,11 @@ import './App.css';
 // import PropChildren from './components/PropChildren';
 // import ChildrenLayout from './components/ChildrenLayout'
 // import PropTypes from './components/PropTypes'
-// import Constructor from './components/Constructor'
+// import Constructor from './components/life-cicle/Constructor'
+// import ComponentWillMount from './components/life-cicle/ComponentWillMount'
+// import Render from './components/life-cicle/Render'
+import EjemploComponentDidMount from './components/life-cicle/EjemploComponentDidMount'
+
 class App extends Component{
   render(){
     return (
@@ -34,6 +39,9 @@ class App extends Component{
         {/* <ChildrenLayout/> */}
         {/* <PropTypes/> */}
         {/* <Constructor/> */}
+        {/* <ComponentWillMount/> */}
+        {/* <Render/> */}
+        <EjemploComponentDidMount/>
       </div> 
         
     );
