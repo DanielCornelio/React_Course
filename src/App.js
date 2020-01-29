@@ -18,7 +18,7 @@ import ComponentWillMount from './components/life-cicle/ComponentWillMount';
 // import Constructor from './components/life-cicle/Constructor'
 // import ComponentWillMount from './components/life-cicle/ComponentWillMount'
 // import Render from './components/life-cicle/Render'
-import EjemploComponentDidMount from './components/life-cicle/EjemploComponentDidMount'
+// import EjemploComponentDidMount from './components/life-cicle/EjemploComponentDidMount'
 
 class App extends Component{
   render(){
@@ -41,7 +41,7 @@ class App extends Component{
         {/* <Constructor/> */}
         {/* <ComponentWillMount/> */}
         {/* <Render/> */}
-        <EjemploComponentDidMount/>
+        {/* <EjemploComponentDidMount/> */}
       </div> 
         
     );
